@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <com.bodyweight.fitness.view.ContentView
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/bottomBar"
+        android:background="@color/primary"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/view_toolbar"
+            android:id="@+id/view_toolbar" />
+
+        <include layout="@layout/view_home"
+            android:id="@+id/view_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_toolbar" />
+
+        <include layout="@layout/view_calendar"
+            android:id="@+id/view_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_toolbar"/>
+
+        <FrameLayout
+            android:id="@+id/view_settings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_toolbar"
+            android:background="@color/activity_background"/>
+    </com.bodyweight.fitness.view.ContentView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomBar"
+        android:background="@drawable/shadow" />
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:bb_tabXmlResource="@xml/tabs"
+        app:bb_inActiveTabColor="#BFBFBF"
+        app:bb_activeTabColor="@color/primary"
+        app:bb_showShadow="false" />
+</RelativeLayout>

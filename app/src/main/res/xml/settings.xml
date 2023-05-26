@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="General">
+
+        <ListPreference
+            android:key="PREFERENCE_WEIGHT_MEASUREMENT_UNITS"
+            android:title="Weight measurement unit"
+            android:entries="@array/weight"
+            android:entryValues="@array/weight_values"
+            android:defaultValue="kg"/>
+
+        <CheckBoxPreference
+            android:key="PREFERENCE_PLAY_SOUND_WHEN_TIMER_STOPS"
+            android:title="Play audio"
+            android:summary="Plays audio when timer stops"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="PREFERENCE_KEEP_SCREEN_ON"
+            android:title="Keep screen always on"
+            android:summary="Prevents screen from turning off when app is running"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="PREFERENCE_AUTOMATICALLY_LOG_WORKOUT_TIME"
+            android:title="Automatically log time"
+            android:summary="Logs workout time automatically for timed exercises"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Rest Timer">
+
+        <CheckBoxPreference
+            android:key="PREFERENCE_SHOW_REST_TIMER"
+            android:title="Show rest timer"
+            android:summary="Shows rest timer after logging any exercise"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="PREFERENCE_REST_TIMER_DEFAULT_SECONDS"
+            android:title="Default Rest Time"
+            android:summary="Default rest time between sets e.g. 30 seconds"
+            android:entries="@array/rest_time"
+            android:entryValues="@array/rest_time_values"
+            android:dependency="PREFERENCE_SHOW_REST_TIMER" />
+
+        <CheckBoxPreference
+            android:key="PREFERENCE_SHOW_REST_TIMER_WARMUP_EXERCISES"
+            android:title="Show rest timer after Warmup"
+            android:summary="Shows rest timer after logging warmup exercises"
+            android:dependency="PREFERENCE_SHOW_REST_TIMER"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="PREFERENCE_SHOW_REST_TIMER_BODYLINE_DRILLS"
+            android:title="Show rest timer after Bodyline Drills"
+            android:summary="Shows rest timer after logging bodyline drills"
+            android:dependency="PREFERENCE_SHOW_REST_TIMER"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="PREFERENCE_SHOW_REST_TIMER_FLEXIBILITY_ROUTINES"
+            android:title="Show rest timer after Flexibility Exercises"
+            android:summary="Shows rest timer after logging flexibility exercises e.g. Starting Stretching or Molding Mobility"
+            android:dependency="PREFERENCE_SHOW_REST_TIMER"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="FAQ">
+
+        <Preference
+            android:title="Frequently Asked Questions"
+            android:summary="/r/bodyweightfitness">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.reddit.com/r/bodyweightfitness/wiki/faq" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Developed &amp; Designed by">
+
+        <Preference
+            android:title="Damian Mazurkiewicz"
+            android:summary="github.com/mazurio">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/mazurio" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Videos by">
+
+        <Preference
+            android:title="Nick"
+            android:summary="www.nick-e.com">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.nick-e.com/contact/" />
+        </Preference>
+
+        <Preference
+            android:title="Antranik"
+            android:summary="www.antranik.org">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://antranik.org/" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About">
+
+        <Preference
+            android:title="@string/app_name"
+            android:summary="@string/app_version"/>
+    </PreferenceCategory>
+</PreferenceScreen>

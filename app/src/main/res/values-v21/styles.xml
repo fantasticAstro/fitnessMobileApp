@@ -1,0 +1,28 @@
+<resources>
+	<style name="FullscreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:windowTranslucentStatus">true</item>
+	</style>
+
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="colorAccent">@color/primaryDark</item>
+		<item name="colorPrimary">@color/primary</item>
+		<item name="colorPrimaryDark">@color/primaryDark</item>
+
+		<item name="android:windowBackground">@color/window_background</item>
+		<item name="android:windowContentOverlay">@null</item>
+
+		<item name="android:windowAnimationStyle">@style/AppTheme.Window</item>
+
+		<item name="android:windowDrawsSystemBarBackgrounds">false</item>
+		<item name="android:windowTranslucentStatus">true</item>
+		<item name="android:windowContentTransitions">true</item>
+		<item name="android:windowAllowEnterTransitionOverlap">true</item>
+		<item name="android:windowAllowReturnTransitionOverlap">true</item>
+	</style>
+
+	<style name="AppTheme.Toolbar.Spinner" parent="Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+		<item name="android:background">?android:selectableItemBackground</item>
+		<item name="android:dropDownSelector">?android:selectableItemBackground</item>
+		<item name="android:divider">@null</item>
+	</style>
+</resources>
